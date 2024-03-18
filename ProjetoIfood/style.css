@@ -8,7 +8,7 @@
 .logo {
     position: absolute; /* Posiciona de forma absoluta */
     top: 40px; /* Distância do topo */
-    left: 30px; /* Distância da esquerda */
+    left: 40px; /* Distância da esquerda */
     width: 80px; /* Largura da logo */
     height: auto; /* Altura ajustável de acordo com a largura */
 }
@@ -28,9 +28,10 @@
 
 
 /* Estilos gerais */
-body {
-    font-family: "Helvetica Neue", Arial, sans-serif;
-    background-color: #f4f4f4;
+body{
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
 }
 
 /* Estilos para a área de login */
