@@ -13,19 +13,17 @@
     height: auto; /* Altura ajustável de acordo com a largura */
 }
 
-.imagemlogin {
-    content: "";
-    min-width: 130vh;
-    min-height: 135vh;
-    width: 130vw;
-    height: 130vw;
-    z-index: -1;
-    position: absolute;
-    background-color: #fdedee;
-    border-radius: 0 100% 100%;
-    left: 50%;
-    transform: translate(-50%);
-    bottom: 0;
+.container {
+    display: flex;
+    align-items: center; /* Centraliza verticalmente */
+    height: 100vh;
+}
+
+.imagem {
+    max-width: 600px; /* Defina o tamanho máximo da imagem */
+    width: auto;
+    height: auto;
+    margin-left: 180px; /* Adiciona margem à direita para separar do conteúdo */
 }
 
 .btnFacebook{
