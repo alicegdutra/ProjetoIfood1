@@ -23,7 +23,7 @@
     max-width: 600px; /* Defina o tamanho máximo da imagem */
     width: auto;
     height: auto;
-    margin-left: 180px; /* Adiciona margem à direita para separar do conteúdo */
+    margin-left: 180px; /* Adiciona margem à esquerda para separar do conteúdo */
 }
 
 .btnFacebook{
