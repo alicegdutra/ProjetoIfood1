@@ -7,8 +7,8 @@
 
 .logo {
     position: absolute; /* Posiciona de forma absoluta */
-    top: 20px; /* Distância do topo */
-    left: 20px; /* Distância da esquerda */
+    top: 40px; /* Distância do topo */
+    left: 30px; /* Distância da esquerda */
     width: 80px; /* Largura da logo */
     height: auto; /* Altura ajustável de acordo com a largura */
 }
@@ -26,9 +26,6 @@
     margin-left: 180px; /* Adiciona margem à esquerda para separar do conteúdo */
 }
 
-.btnFacebook{
-    color: #007aff;
-}
 
 /* Estilos gerais */
 body {
