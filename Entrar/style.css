@@ -1,88 +1,198 @@
-@import url('https://fonts.googleapis.com/css2?family=Saira+Semi+Condensed:wght@100;200;300;400;500;600;700;800;900&family=Sarabun:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
-
-/* Reset de estilos */
-body {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    height: 100vh;
-    width: 100vw;
-    overflow: hidden;
-}
-
-#logo {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
-#background {
-    background-color: #FDEDEE;
-    height: 200%;
-    width: 65vw;
-    border-top-right-radius: 200%;
-    border-bottom-right-radius: 200%;
-    z-index: 0;
-}
-
-#logotipo {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
-#logo {
+body{
     display: flex;
-    align-items: center; /* Centraliza verticalmente */
-    height: 100vh;
+    font-family: 'fontRegular';
+    background-image: url(./img/fundo.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    justify-content: end;
 }
 
-#pessoas{
-    max-width: 600px; /* Defina o tamanho máximo da imagem */
+.custom-link{
+    margin-top: 2%;
+    padding: 10px 50px 50px 60px;
     position: absolute;
-    transform: translateY(-50%);
-    top: 50%;
-    left: 15vw;
-    width: auto;
-    height: auto;
-    margin-left: 180px; /* Adiciona margem à esquerda para separar do conteúdo */
+    margin-right: 90%;
 }
 
-/* Estilos para a área de login */
-#login {
-    width: 25.6em;
-    height: 24.3em;
-    min-width: 400px;
-    aspect-ratio: 1;
+.box{
+    padding: 10px 70px 10px 70px;
+    margin-top: 10%;
+    margin-right: 11%;
+    border-radius: 5px;
     background-color: white;
-    border-radius: 2%;
-    box-shadow: 0px 0px 5px 3px rgba(255, 0, 0, 0.05);
-    position: absolute;
-    right: 20%;
-    z-index: 1;
+    box-shadow: 0 0 10px rgba(95, 94, 94, 0.5);
+}
+
+.heading{
+    font-size: 2.5rem;
+    line-height: 17px;
+    color: #414143;
+    font-weight: 600;
+    text-align: center;
+    margin: 25px;
+}
+
+.sub-heading{
+    text-align: center;
+    font-size: 1.5rem;
+    color: #717171;
+}
+
+.btn-facebook-google{
     display: flex;
+    justify-content: center;
     flex-direction: column;
-    justify-content: flex-start;
+}
+
+.facebook, .google{
+    display: flex;
     align-items: center;
+    padding: 15px;
+    margin-bottom: 10px;
+    font-size: 15px;
+    font-weight: bold;
+    text-decoration: none;
 }
 
-#google {
-    position: absolute; /* Posiciona de forma absoluta */
-    top: 40px; /* Distância do topo */
-    left: 40px; /* Distância da esquerda */
-    width: 80px; /* Largura da logo */
-    height: auto; /* Altura ajustável de acordo com a largura */
+.facebook img, .google img {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
 }
 
-#facebook {
-    position: absolute; /* Posiciona de forma absoluta */
-    top: 40px; /* Distância do topo */
-    left: 40px; /* Distância da esquerda */
-    width: 80px; /* Largura da logo */
-    height: auto; /* Altura ajustável de acordo com a largura */
+.btn-phone-email{
+    display: flex;
 }
 
+.phone, .email{
+    padding: 15px;
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 20px;
+    font-weight: bolder;
+    color:#cbcdd1 ;
+}
 
+.phone{
+    margin-right: 20px;
+}
 
+button{
+    border-radius: 5px;
+    border: none;
+}
+
+button:hover{
+    cursor: pointer;
+}
+
+a{
+    border-radius: 5px;
+    border: none;
+    text-decoration: none;
+    color: inherit;
+}
+
+a:hover{
+    cursor: pointer;
+}
+
+.facebook{
+    color: white;
+    background-color: #4065b4;
+    transition: 0.1s;
+}
+
+.facebook:hover{
+    background-color: #7295e1;
+}
+
+.google{
+    background-color: white;
+    border: 0.5px solid #d8dade;
+    transition: 0.1s;
+}
+
+.google:hover{
+    background-color: #cbcdd1;
+}
+
+.phone:hover, .email:hover{
+    background-color: #ea1d2c;
+    color: white;
+}
+
+.phone-img{
+    display: none;
+}
+
+@media only screen and (max-width: 768px) {
+    .box {
+        margin-top: 5%;
+        justify-content: center;
+        margin-right: 0;
+        padding: 10px;
+        box-shadow: none;
+    }
+
+    .heading{
+        line-height: 40px;
+    }
+
+    body{
+        display: flex;
+        justify-content: center;
+        background-image: none;
+        margin-top: 0;
+        margin-left: 0;
+        margin-right: 0;
+        flex-direction: column;
+    }
+
+    .custom-link{
+        display: none;
+    }
+
+    .phone-img{
+        display: block;
+        background-image: url('./img/fundo_cel.png');
+        width: auto;
+        padding: 150px;
+        background-size: cover;
+    }
+    .facebook, .google {
+        padding: 15px;
+        margin-bottom: 10px;
+        font-size: 15px;
+        font-weight: bold;
+        color: white;
+        background-color: #4065b4;
+        border-radius: 5px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+        transition: background-color 0.1s;
+    }
+    
+    .facebook img, .google img {
+        width: 20px;
+        height: 20px;
+        margin-right: 10px;
+    }
+    
+    .facebook:hover{
+        background-color: #7295e1;
+    }
+    
+    .google:hover{
+        background-color: #cbcdd1;
+    }
+    
+}
+
+@font-face {
+    font-family: 'fontRegular';
+    src: url('../fonts/iFoodRCTextos-Regular.ttf') format('woff2');
+}
