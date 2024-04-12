@@ -1,10 +1,11 @@
 body{
     display: flex;
-    font-family: 'fontRegular';
-    background-image: url(./img/fundo.png);
+    font-family: Arial, Helvetica, sans-serif;
     background-size: cover;
     background-repeat: no-repeat;
     justify-content: end;
+    background-size: contain;
+    background-position: left center;
 }
 
 .custom-link{
@@ -148,19 +149,13 @@ a:hover{
         margin-left: 0;
         margin-right: 0;
         flex-direction: column;
+        background-position: top;
     }
 
     .custom-link{
         display: none;
     }
 
-    .phone-img{
-        display: block;
-        background-image: url('./img/fundo_cel.png');
-        width: auto;
-        padding: 150px;
-        background-size: cover;
-    }
     .facebook, .google {
         padding: 15px;
         margin-bottom: 10px;
@@ -193,6 +188,6 @@ a:hover{
 }
 
 @font-face {
-    font-family: 'fontRegular';
+    font-family: Arial, Helvetica, sans-serif;
     src: url('../fonts/iFoodRCTextos-Regular.ttf') format('woff2');
 }
