@@ -1,4 +1,5 @@
-body{
+/* Estilos para telas maiores que 768px */
+body {
     display: flex;
     font-family: Arial, Helvetica, sans-serif;
     background-size: cover;
@@ -13,26 +14,25 @@ body::before {
     left: 0;
     width: 55%;
     height: 100%;
-    background-color: #FFE0E6; /* Cor rosa claro */
-    border-radius: 0 100% 100% 0; /* Cria um oval */
+    background-color: #FFE0E6;
+    border-radius: 0 100% 100% 0;
     z-index: -1;
 }
-
 
 .container-logo {
     position: fixed;
     top: 5%;
     left: 3%;
     margin: 20px;
-    z-index: 999; /* Para garantir que a logo fique acima de outros elementos */
+    z-index: 999;
 }
 
 .container-logo img {
-    width: 100px; /* Defina a largura desejada para a logo */
-    height: auto; /* Mantém a proporção da imagem */
+    width: 100px;
+    height: auto;
 }
 
-.custom-link{
+.custom-link {
     margin-top: 2%;
     padding: 10px 50px 50px 60px;
     position: absolute;
@@ -41,27 +41,28 @@ body::before {
 
 .flex-container {
     display: flex;
-    justify-content: center; /* Centraliza a imagem horizontalmente */
+    justify-content: center;
 }
 
 #pessoas {
-    width: 400px; /* Defina a largura desejada para a imagem */
-    height: auto; /* Mantenha a proporção da imagem */
-    position: absolute; /* Posição absoluta */
-    top: 50%; /* Centraliza verticalmente */
-    left: 100px; /* Alinha à esquerda */
-    transform: translateY(-50%); /* Corrige a posição vertical */
+    width: 400px;
+    height: auto;
+    position: absolute;
+    top: 50%;
+    left: 100px;
+    transform: translateY(-50%);
 }
+
 .box {
     padding: 10px 70px;
     margin-top: 10%;
-    margin-right: 10%; /* Ajuste a margem direita conforme necessário */
+    margin-right: 10%;
     border-radius: 5px;
     background-color: white;
     box-shadow: 0 0 10px rgba(95, 94, 94, 0.5);
 }
 
-.heading{
+.heading {
     font-size: 2.5rem;
     line-height: 17px;
     color: #414143;
@@ -70,19 +71,20 @@ body::before {
     margin: 25px;
 }
 
-.sub-heading{
+.sub-heading {
     text-align: center;
     font-size: 1.5rem;
     color: #717171;
 }
 
-.btn-facebook-google{
+.btn-facebook-google {
     display: flex;
     justify-content: center;
     flex-direction: column;
 }
 
-.facebook, .google{
+.facebook,
+.google {
     display: flex;
     align-items: center;
     padding: 15px;
@@ -92,93 +94,104 @@ body::before {
     text-decoration: none;
 }
 
-.facebook img, .google img {
+.facebook img,
+.google img {
     width: 20px;
     height: 20px;
     margin-right: 10px;
 }
 
-.btn-phone-email{
+.btn-phone-email {
     display: flex;
 }
 
-.phone, .email{
+.phone,
+.email {
     padding: 15px;
     width: 100%;
     margin-top: 20px;
     margin-bottom: 20px;
     font-size: 20px;
     font-weight: bolder;
-    color:#cbcdd1 ;
+    color: #cbcdd1;
 }
 
-.phone{
+.phone {
     margin-right: 20px;
 }
 
-button{
+button {
     border-radius: 5px;
     border: none;
 }
 
-button:hover{
+button:hover {
     cursor: pointer;
 }
 
-a{
+a {
     border-radius: 5px;
     border: none;
     text-decoration: none;
     color: inherit;
 }
 
-a:hover{
+a:hover {
     cursor: pointer;
 }
 
-.facebook{
+.facebook {
     color: white;
     background-color: #4065b4;
     transition: 0.1s;
 }
 
-.facebook:hover{
+.facebook:hover {
     background-color: #7295e1;
 }
 
-.google{
+.google {
     background-color: white;
     border: 0.5px solid #d8dade;
     transition: 0.1s;
 }
 
-.google:hover{
+.google:hover {
     background-color: #cbcdd1;
 }
 
-.phone:hover, .email:hover{
+.phone:hover,
+.email:hover {
     background-color: #ea1d2c;
     color: white;
 }
 
-.phone-img{
+.phone-img {
     display: none;
 }
 
+/* Estilos específicos para telas menores ou iguais a 768px */
 @media only screen and (max-width: 768px) {
     .box {
         margin-top: 5%;
         justify-content: center;
-        margin-right: 0;
         padding: 10px;
-        box-shadow: none;
+        position: relative;
+        z-index: 1;
+        margin-top: 35%;
+        margin-left: 10%;
+        margin-right: 10%;
+        border-radius: 5px;
+        background-color: white;
+        box-shadow: 0 0 10px rgba(95, 94, 94, 0.5);
+        width: calc(80% - 20px);
     }
 
-    .heading{
+    .heading {
         line-height: 40px;
     }
 
-    body{
+    body {
         display: flex;
         justify-content: center;
         background-image: none;
@@ -189,17 +202,46 @@ a:hover{
         background-position: top;
     }
 
-    .custom-link{
+    body::before {
+        content: "";
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 50vh;
+        background-color: #FFE0E6;
+        border-radius: 0 0 100% 100%;
+        z-index: -1;
+    }
+
+    .container-logo {
+        width: 100px;
+        position: absolute;
+        top: 10px;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 999;
+    }
+
+    #pessoas {
+        width: 200px;
+        height: auto;
+        position: absolute;
+        top: 30px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .custom-link {
         display: none;
     }
 
-    .facebook, .google {
+    .facebook,
+    .google {
         padding: 15px;
         margin-bottom: 10px;
         font-size: 15px;
         font-weight: bold;
-        color: white;
-        background-color: #4065b4;
         border-radius: 5px;
         display: flex;
         align-items: center;
@@ -207,24 +249,27 @@ a:hover{
         text-decoration: none;
         transition: background-color 0.1s;
     }
-    
-    .facebook img, .google img {
+
+    .facebook {
+        color: white;
+    }
+
+    .google {
+        color: #414143;
+    }
+
+    .facebook img,
+    .google img {
         width: 20px;
         height: 20px;
         margin-right: 10px;
     }
-    
-    .facebook:hover{
+
+    .facebook:hover {
         background-color: #7295e1;
     }
-    
-    .google:hover{
+
+    .google:hover {
         background-color: #cbcdd1;
     }
-    
-}
-
-@font-face {
-    font-family: Arial, Helvetica, sans-serif;
-    src: url('../fonts/iFoodRCTextos-Regular.ttf') format('woff2');
 }
